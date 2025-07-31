@@ -1,0 +1,173 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01-insert-teams
+      author: your_name
+      changes:
+        - insert:
+            tableName: teams
+            columns:
+              - column:
+                  name: name
+                  value: "Dragons FC"
+              - column:
+                  name: commission
+                  value: 5.0
+              - column:
+                  name: balance
+                  valueNumeric: 5000000.00
+        - insert:
+            tableName: teams
+            columns:
+              - column:
+                  name: name
+                  value: "Thunder United"
+              - column:
+                  name: commission
+                  value: 7.5
+              - column:
+                  name: balance
+                  valueNumeric: 3500000.00
+        - insert:
+            tableName: teams
+            columns:
+              - column:
+                  name: name
+                  value: "Shadow Wolves"
+              - column:
+                  name: commission
+                  value: 3.0
+              - column:
+                  name: balance
+                  valueNumeric: 4200000.00
+
+  - changeSet:
+      id: 05-insert-players
+      author: your_name
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: full_name
+                  value: "Leo Firestorm"
+              - column:
+                  name: age
+                  valueNumeric: 24
+              - column:
+                  name: experience_months
+                  valueNumeric: 48
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: full_name
+                  value: "Max Thunderblade"
+              - column:
+                  name: age
+                  valueNumeric: 28
+              - column:
+                  name: experience_months
+                  valueNumeric: 60
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: full_name
+                  value: "Eli Stormrider"
+              - column:
+                  name: age
+                  valueNumeric: 22
+              - column:
+                  name: experience_months
+                  valueNumeric: 36
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: full_name
+                  value: "Jade Nightwhisper"
+              - column:
+                  name: age
+                  valueNumeric: 25
+              - column:
+                  name: experience_months
+                  valueNumeric: 50
+              - column:
+                  name: team_id
+                  value: 2
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: full_name
+                  value: "Kai Ironclaw"
+              - column:
+                  name: age
+                  valueNumeric: 30
+              - column:
+                  name: experience_months
+                  valueNumeric: 72
+              - column:
+                  name: team_id
+                  value: 2
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: full_name
+                  value: "Mira Windshadow"
+              - column:
+                  name: age
+                  valueNumeric: 21
+              - column:
+                  name: experience_months
+                  valueNumeric: 30
+              - column:
+                  name: team_id
+                  value: 2
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: full_name
+                  value: "Riven Nightblade"
+              - column:
+                  name: age
+                  valueNumeric: 27
+              - column:
+                  name: experience_months
+                  valueNumeric: 60
+              - column:
+                  name: team_id
+                  value: 3
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: full_name
+                  value: "Selene Frostwalker"
+              - column:
+                  name: age
+                  valueNumeric: 26
+              - column:
+                  name: experience_months
+                  valueNumeric: 55
+              - column:
+                  name: team_id
+                  value: 3

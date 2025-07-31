@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class TeamServiceImpl implements TeamService {
-    private final TeamRepository repository;
+    private  final TeamRepository repository;
     private final TeamMapper mapper;
     @Override
     public TeamResponseDto getById(Long id) {
@@ -53,7 +53,8 @@ public class TeamServiceImpl implements TeamService {
         return mapper.toDto(repository.save(team));
     }
 
-    private Team getTeamOrThrow(Long id) {
+    @Override
+    public Team getTeamOrThrow(Long id) { //package-private so another services could invoke this method
         return repository.findById(id).orElseThrow(
                 () -> new TeamNotFoundException(Constants.Team.TEAM_NOT_FOUND + id)
         );

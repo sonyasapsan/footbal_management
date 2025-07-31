@@ -59,7 +59,8 @@ public class PlayerServiceImpl implements PlayerService {
         return mapper.toDto(repository.save(player));
     }
 
-    private Player getPlayerOrThrow(Long id) {
+    @Override
+    public Player getPlayerOrThrow(Long id) {
         return repository.findById(id).orElseThrow(
                 () -> new PlayerNotFoundException(Constants.Player.PLAYER_NOT_FOUND + id)
         );
